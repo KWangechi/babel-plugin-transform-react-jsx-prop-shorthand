@@ -1,16 +1,27 @@
 {
   "name": "babel-plugin-transform-react-jsx-prop-shorthand",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
+  "main": "src/index.js",
   "type": "module",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
-  "keywords": [],
+  "keywords": [
+    "babel-plugin",
+    "jsx",
+    "shorthand",
+    "react"
+  ],
   "author": "KWangechi<https://github.com/KWangechi>",
   "license": "MIT",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@babel/parser": "file:C:/Users/user/Documents/PROJECTS/babel-clone/packages/babel-parser",
+    "@babel/plugin-transform-react-jsx": "^7.25.9",
+    "@babel/traverse": "file:C:/Users/user/Documents/PROJECTS/babel-clone/packages/babel-traverse",
+    "@babel/types": "file:C:/Users/user/Documents/PROJECTS/babel-clone/packages/babel-types"
+  },
+  "peerDependencies": {
+    "@babel/core": "file:C:/Users/user/Documents/PROJECTS/babel-clone/packages/babel-core"
+  }
 }
