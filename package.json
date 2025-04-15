@@ -1,0 +1,16 @@
+{
+  "name": "babel-plugin-transform-react-jsx-prop-shorthand",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "KWangechi<https://github.com/KWangechi>",
+  "license": "MIT",
+  "description": ""
+}
