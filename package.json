@@ -4,7 +4,22 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "build": "babel src --out-dir lib --extensions .js,.jsx",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier --write .",
+    "prettier:check": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "release": "standard-version --skip.commit --skip.tag",
+    "release:patch": "npm run release -- --release-as patch",
+    "release:minor": "npm run release -- --release-as minor",
+    "release:major": "npm run release -- --release-as major",
+    "release:prerelease": "npm run release -- --prerelease",
+    "release:prepatch": "npm run release -- --release-as prepatch",
+    "release:preminor": "npm run release -- --release-as preminor",
+    "release:premajor": "npm run release -- --release-as premajor"
   },
   "keywords": [
     "babel-plugin",
@@ -14,14 +29,14 @@
   ],
   "author": "KWangechi<https://github.com/KWangechi>",
   "license": "MIT",
-  "description": "",
+  "description": "Transforms React JSX shorthand props with double colons to Standard JSX syntax",
   "dependencies": {
-    "@babel/parser": "file:C:/Users/user/Documents/PROJECTS/babel-clone/packages/babel-parser",
-    "@babel/plugin-transform-react-jsx": "^7.25.9",
-    "@babel/traverse": "file:C:/Users/user/Documents/PROJECTS/babel-clone/packages/babel-traverse",
-    "@babel/types": "file:C:/Users/user/Documents/PROJECTS/babel-clone/packages/babel-types"
+    "@babel/plugin-transform-react-jsx": "^7.25.9"
+  },
+  "devDependencies": {
+    "vitest": "^0.30.0"
   },
   "peerDependencies": {
-    "@babel/core": "file:C:/Users/user/Documents/PROJECTS/babel-clone/packages/babel-core"
+    "@babel/core": "^7.0.0"
   }
 }

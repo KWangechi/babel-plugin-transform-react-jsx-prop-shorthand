@@ -1,10 +1,10 @@
 import fs from 'fs';
-import { transform } from '@babel/core';
 import autoResolvePlugin from '../src/index.js';
+import { transform } from '@babel/core';
 
 const reactCodeExample = fs.readFileSync("./test/react/App.jsx", "utf-8");
 
-// console.log(reactCodeExample);
+// Transform the code using your custom parser and plugin
 const { code } = transform(reactCodeExample, {
   plugins: [autoResolvePlugin, "@babel/plugin-transform-react-jsx"],
 });
