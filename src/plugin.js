@@ -1,8 +1,16 @@
 import { types as t } from "@babel/core";
+import { parse } from "../dependencies/babel-parser/lib/index.js";
 
 export default function jsxTransformPropShorthand() {
   return {
     name: "babel-plugin-react-jsx-props-shorthand",
+    parserOverride(code, opts) {
+      return parse(code, {
+        ...opts,
+        sourceType: "module",
+        plugins: ["jsx"],
+      });
+    },
     visitor: {
       JSXOpeningElement(path) {
         // only target Functional Components - for now
@@ -21,7 +29,7 @@ export default function jsxTransformPropShorthand() {
         attributes.forEach((attributePath) => {
           const attrNode = attributePath.node;
 
-          if (t.isJSXPropShorthandAttribute(attrNode)) {
+          if (attrNode.type === 'JSXPropShorthandAttribute') {
             console.log("Found JSXPropShorthandAttribute");
             const propName = attrNode.name.name;
             if (!path.scope.hasBinding(propName)) {
