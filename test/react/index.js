@@ -1,5 +1,5 @@
 import fs from 'fs';
-import autoResolvePlugin from '../src/index.js';
+import autoResolvePlugin from '../../src/index.js';
 import { transform } from '@babel/core';
 
 const reactCodeExample = fs.readFileSync("./test/react/App.jsx", "utf-8");
