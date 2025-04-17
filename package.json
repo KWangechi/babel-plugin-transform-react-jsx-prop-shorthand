@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-transform-react-jsx-prop-shorthand",
   "version": "0.0.1",
-  "main": "src/index.js",
+  "main": "./dist/index.js",
   "type": "module",
   "scripts": {
     "test": "vitest",
@@ -9,17 +9,11 @@
     "prepublishOnly": "npm run build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prettier": "prettier --write .",
-    "prettier:check": "prettier --check .",
-    "prettier:fix": "prettier --write .",
     "release": "standard-version --skip.commit --skip.tag",
     "release:patch": "npm run release -- --release-as patch",
     "release:minor": "npm run release -- --release-as minor",
     "release:major": "npm run release -- --release-as major",
-    "release:prerelease": "npm run release -- --prerelease",
-    "release:prepatch": "npm run release -- --release-as prepatch",
-    "release:preminor": "npm run release -- --release-as preminor",
-    "release:premajor": "npm run release -- --release-as premajor"
+    "release:prerelease": "npm run release -- --prerelease"
   },
   "keywords": [
     "babel-plugin",
@@ -34,6 +28,8 @@
     "@babel/plugin-transform-react-jsx": "^7.25.9"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.4.0",
+    "vite": "^6.3.0",
     "vitest": "^0.30.0"
   },
   "peerDependencies": {
