@@ -2,7 +2,7 @@ import fs from 'fs';
 import autoResolvePlugin from '../../src/index.js';
 import { transform } from '@babel/core';
 
-const reactCodeExample = fs.readFileSync("./test/react/App.jsx", "utf-8");
+const reactCodeExample = fs.readFileSync("./tests/react/App.jsx", "utf-8");
 
 // Transform the code using your custom parser and plugin
 const { code } = transform(reactCodeExample, {
