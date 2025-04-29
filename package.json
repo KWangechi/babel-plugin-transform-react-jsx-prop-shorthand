@@ -24,15 +24,14 @@
   "author": "KWangechi<https://github.com/KWangechi>",
   "license": "MIT",
   "description": "Transforms React JSX shorthand props with double colons to Standard JSX syntax",
-  "dependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.25.9",
-    "@vitejs/plugin-react": "^4.4.1",
-    "@babel/preset-react": "^7.26.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "fast-glob": "^3.3.3",
     "vite": "^6.3.0",
-    "vitest": "^0.30.0"
+    "vitest": "^0.30.0",
+    "@babel/plugin-transform-react-jsx": "^7.25.9",
+    "@vitejs/plugin-react": "^4.4.1",
+    "@babel/preset-react": "^7.26.3"
   },
   "peerDependencies": {
     "@babel/core": "^7.0.0"
