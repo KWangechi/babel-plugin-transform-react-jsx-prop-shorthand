@@ -1,5 +1,7 @@
 import { types as t } from "@babel/core";
-import { parse } from "../babel-parser/index.js";
+import * as babelParser from "../babel-parser/index.js";
+
+const { parse } = babelParser;
 
 export default function jsxTransformPropShorthand() {
   return {
@@ -29,7 +31,7 @@ export default function jsxTransformPropShorthand() {
         attributes.forEach((attributePath) => {
           const attrNode = attributePath.node;
 
-          if (attrNode.type === 'JSXPropShorthandAttribute') {
+          if (attrNode.type === "JSXPropShorthandAttribute") {
             const propName = attrNode.name.name;
             if (!path.scope.hasBinding(propName)) {
               console.warn(

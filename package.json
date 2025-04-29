@@ -1,19 +1,12 @@
 {
   "name": "babel-plugin-transform-react-jsx-prop-shorthand",
   "version": "0.0.1",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "type": "module",
   "scripts": {
     "test": "vitest",
     "build": "vite build",
-    "prepublishOnly": "npm run build",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "release": "standard-version --skip.commit --skip.tag",
-    "release:patch": "npm run release -- --release-as patch",
-    "release:minor": "npm run release -- --release-as minor",
-    "release:major": "npm run release -- --release-as major",
-    "release:prerelease": "npm run release -- --prerelease"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "babel-plugin",
