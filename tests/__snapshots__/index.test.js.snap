@@ -1,0 +1,108 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Fixtures Tests > should bundle  1`] = `
+"const propA = 'Hello World';
+/*#__PURE__*/React.createElement(ChildComp, {
+  propA: propA
+});"
+`;
+
+exports[`Fixtures Tests > should bundle correctly with Vite 1`] = `
+"const propA = 'Hello World';
+/*#__PURE__*/React.createElement(ChildComp, {
+  propA: propA
+});"
+`;
+
+exports[`Fixtures Tests > should process .tsx and .jsx files correctly 1`] = `
+{
+  "output": [
+    {
+      "code": "
+",
+      "dynamicImports": [],
+      "exports": [],
+      "facadeModuleId": "C:/Users/user/Documents/WANGECHI'S DOCUMENTS/PERSONAL PROJECTS/DUMB PROJECTS/babel-plugin-transform-react-jsx-prop-shorthand/tests/fixtures/func-scope/App.jsx",
+      "fileName": "assets/App-l0sNRNKZ.js",
+      "implicitlyLoadedBefore": [],
+      "importedBindings": {},
+      "imports": [],
+      "isDynamicEntry": false,
+      "isEntry": true,
+      "isImplicitEntry": false,
+      "map": null,
+      "moduleIds": [
+        "C:/Users/user/Documents/WANGECHI'S DOCUMENTS/PERSONAL PROJECTS/DUMB PROJECTS/babel-plugin-transform-react-jsx-prop-shorthand/tests/fixtures/func-scope/App.jsx",
+      ],
+      "modules": {
+        "C:/Users/user/Documents/WANGECHI'S DOCUMENTS/PERSONAL PROJECTS/DUMB PROJECTS/babel-plugin-transform-react-jsx-prop-shorthand/tests/fixtures/func-scope/App.jsx": {
+          "code": null,
+          "originalLength": 0,
+          "removedExports": [],
+          "renderedExports": [],
+          "renderedLength": 0,
+        },
+      },
+      "name": "App",
+      "preliminaryFileName": "assets/App-!~{001}~.js",
+      "referencedFiles": [],
+      "sourcemapFileName": null,
+      "type": "chunk",
+      "viteMetadata": {
+        "importedAssets": Set {},
+        "importedCss": Set {},
+      },
+    },
+  ],
+}
+`;
+
+exports[`Fixtures Tests > should process .tsx and .jsx files correctly 2`] = `
+{
+  "output": [
+    {
+      "code": "
+",
+      "dynamicImports": [],
+      "exports": [],
+      "facadeModuleId": "C:/Users/user/Documents/WANGECHI'S DOCUMENTS/PERSONAL PROJECTS/DUMB PROJECTS/babel-plugin-transform-react-jsx-prop-shorthand/tests/fixtures/global-imports/App.jsx",
+      "fileName": "assets/App-l0sNRNKZ.js",
+      "implicitlyLoadedBefore": [],
+      "importedBindings": {},
+      "imports": [],
+      "isDynamicEntry": false,
+      "isEntry": true,
+      "isImplicitEntry": false,
+      "map": null,
+      "moduleIds": [
+        "C:/Users/user/Documents/WANGECHI'S DOCUMENTS/PERSONAL PROJECTS/DUMB PROJECTS/babel-plugin-transform-react-jsx-prop-shorthand/tests/fixtures/global-imports/App.jsx",
+      ],
+      "modules": {
+        "C:/Users/user/Documents/WANGECHI'S DOCUMENTS/PERSONAL PROJECTS/DUMB PROJECTS/babel-plugin-transform-react-jsx-prop-shorthand/tests/fixtures/global-imports/App.jsx": {
+          "code": null,
+          "originalLength": 0,
+          "removedExports": [],
+          "renderedExports": [],
+          "renderedLength": 0,
+        },
+      },
+      "name": "App",
+      "preliminaryFileName": "assets/App-!~{001}~.js",
+      "referencedFiles": [],
+      "sourcemapFileName": null,
+      "type": "chunk",
+      "viteMetadata": {
+        "importedAssets": Set {},
+        "importedCss": Set {},
+      },
+    },
+  ],
+}
+`;
+
+exports[`Fixtures Tests > should transform shorthand props correctly 1`] = `
+"const propA = 'Hello World';
+/*#__PURE__*/React.createElement(ChildComp, {
+  propA: propA
+});"
+`;
