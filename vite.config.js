@@ -3,10 +3,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   entry: ["./src/index.js"],
   build: {
-    outDir: "dist",
-    rollupOptions: {
-      input: "./src/index.js",
-    },
+    outDir: "dist"
   },
   // test: {
   //   build: {

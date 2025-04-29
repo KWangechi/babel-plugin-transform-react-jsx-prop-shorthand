@@ -1,11 +1,11 @@
 {
   "name": "babel-plugin-transform-react-jsx-prop-shorthand",
   "version": "0.0.1",
-  "main": "./dist/index.js",
+  "main": "./src/index.js",
   "type": "module",
   "scripts": {
     "test": "vitest",
-    "build": "babel src --out-dir lib --extensions .js,.jsx",
+    "build": "vite build",
     "prepublishOnly": "npm run build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -25,6 +25,11 @@
   "license": "MIT",
   "description": "Transforms React JSX shorthand props with double colons to Standard JSX syntax",
   "dependencies": {},
+  "files": [
+    "src",
+    "dist",
+    "README.md"
+  ],
   "devDependencies": {
     "fast-glob": "^3.3.3",
     "vite": "^6.3.0",
