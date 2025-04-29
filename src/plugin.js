@@ -1,5 +1,5 @@
 import { types as t } from "@babel/core";
-import { parse } from "../dependencies/babel-parser/lib/index.js";
+import { parse } from "../babel-parser/index.js";
 
 export default function jsxTransformPropShorthand() {
   return {
