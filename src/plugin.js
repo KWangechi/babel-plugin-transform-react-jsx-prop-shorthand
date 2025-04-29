@@ -30,7 +30,6 @@ export default function jsxTransformPropShorthand() {
           const attrNode = attributePath.node;
 
           if (attrNode.type === 'JSXPropShorthandAttribute') {
-            console.log("Found JSXPropShorthandAttribute");
             const propName = attrNode.name.name;
             if (!path.scope.hasBinding(propName)) {
               console.warn(
