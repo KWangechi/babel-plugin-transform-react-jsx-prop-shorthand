@@ -1,12 +1,16 @@
 # babel-plugin-transform-react-jsx-prop-shorthand
 
-A Babel plugin that transforms React JSX props Shorthand Syntax - by using double colons i.e from
+A Babel plugin that transforms React JSX props Shorthand Syntax - by using double colons.
+
+## Example
+
+### Input
 
 ```jsx
 <CompA ::propA ::propB />
 ```
 
-to
+### Output
 
 ```jsx
 <CompA propA={propA} propB={propB} />
@@ -49,20 +53,6 @@ export default defineConfig({
     }),
   ],
 });
-```
-
-## Example
-
-### Input
-
-```jsx
-<MyComponent ::prop anotherProp="value" />
-```
-
-### Output
-
-```jsx
-<MyComponent prop={prop} anotherProp="value" />
 ```
 
 ## Motivation
