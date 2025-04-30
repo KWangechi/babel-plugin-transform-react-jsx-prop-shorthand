@@ -7,7 +7,7 @@ export default defineConfig({
     lib: {
       entry: "./src/index.js",
       name: "jsxTransformPropShorthand",
-      formats: ["es"],
+      formats: ["es", 'cjs'],
       fileName: `index`,
     },
     sourcemap: false
