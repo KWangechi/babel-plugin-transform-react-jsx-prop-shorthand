@@ -1,3 +1,1 @@
-import jsxTransformPropShorthand from "./plugin.js";
-
-export default jsxTransformPropShorthand;
+export { jsxTransformPropShorthand } from "./plugin.js";

@@ -4,7 +4,7 @@ import path from "path";
 import { build } from "vite";
 import react from "@vitejs/plugin-react";
 import fg from "fast-glob";
-import jsxTransformPropShorthand from "../src/index.js";
+import {jsxTransformPropShorthand} from "../src/index.js";
 import { transform } from "@babel/core";
 
 describe("Fixtures Tests", async () => {

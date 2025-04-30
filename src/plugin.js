@@ -3,7 +3,7 @@ import * as babelParser from "../babel-parser/index.js";
 
 const { parse } = babelParser;
 
-export default function jsxTransformPropShorthand() {
+export function jsxTransformPropShorthand() {
   return {
     name: "babel-plugin-react-jsx-props-shorthand",
     parserOverride(code, opts) {
