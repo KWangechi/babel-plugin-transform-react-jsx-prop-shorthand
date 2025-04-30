@@ -11,6 +11,7 @@ to
 ```jsx
 <CompA propA={propA} propB={propB} />
 ```
+
 where possible, making your code cleaner and more concise.
 
 ## Important Note
@@ -20,11 +21,8 @@ This plugin bundles modified versions of `@babel/parser`, `@babel/types`, and `@
 ## Limitations
 
 - **Restricted to React Functional Components (RFCs):** This plugin only supports shorthand syntax for props used in React Functional Components. It does not work with class components or other types of React elements.
-- **Non-standard Feature:** The shorthand syntax (`::prop`) is not a standard feature of JSX or React. Using this plugin requires a modified version of the Babel codebase, which may lead to compatibility issues with other Babel plugins or tools.
+- **Non-standard Syntax:** The shorthand syntax (`::prop`) is not part of standard JSX or React. It requires a custom Babel implementation, which may cause compatibility issues with other Babel tools and plugins. Additionally, IDEs like VSCode may show errors as the syntax is not recognized by the JSX LSP Server.
 - **Potential Maintenance Overhead:** Since the plugin relies on a custom Babel implementation, updates to Babel's main codebase may require corresponding updates to the plugin to maintain compatibility.
-- **Limited Ecosystem Support:** Tools and libraries that rely on standard JSX syntax may not recognize or support the shorthand syntax introduced by this plugin.
-- **Learning Curve:** Developers unfamiliar with the shorthand syntax may find the code less intuitive, potentially impacting team collaboration.
-
 
 ## Installation
 
@@ -34,20 +32,23 @@ npm install --save-dev babel-plugin-transform-react-jsx-prop-shorthand
 
 ## Usage
 
-Add the plugin to your Babel configuration:
+Add the plugin to your Bundler config file e.g if using [Vite](https://vite.dev/guide/), modify your `vite.config.js` file:
 
-### `.babelrc` or `babel.config.json`
+### `vite.config.js`
 
-```json
-{
-  "plugins": ["babel-plugin-transform-react-jsx-prop-shorthand"]
-}
-```
+```js
+import { react } from "@vite/plugin-react";
+import jsxTransformPropShorthand from "babel-plugin-transform-react-jsx-prop-shorthand";
 
-### Babel CLI
-
-```bash
-babel --plugins babel-plugin-transform-react-jsx-prop-shorthand src --out-dir lib
+export default defineConfig({
+  plugins: [
+    react({
+      babel: {
+        plugins: [jsxTransformPropShorthand()],
+      },
+    }),
+  ],
+});
 ```
 
 ## Example
@@ -67,6 +68,24 @@ babel --plugins babel-plugin-transform-react-jsx-prop-shorthand src --out-dir li
 ## Motivation
 
 This plugin simplifies JSX syntax by enabling writing shorthand JSX and having it transformed into regular JSX, improving code readability and reducing boilerplate.
+
+> Sidenote: The name of the plugin is so long(Yeah, I know), will work on that and narrow it down. Suggestions are also welcomed
+
+## Special Mentions
+
+During the development of this project, I came across several insightful resources that deserve a special shoutout:
+
+1. **[Lin Tai Hau's Article](https://lihautan.com/creating-custom-javascript-syntax-with-babel)**  
+  This fantastic article made the process of forking the Babel repository much easier. A must-read for anyone exploring custom JavaScript syntax with Babel.
+
+2. **[Babel Propname Value Shorthand](https://github.com/inversepolarity/babel-prop-name-value-shorthand)**  
+  Initially, I considered this approach. However, implementing it in JSX results in props being auto-resolved to boolean values, which can be a bit confusing. Despite this, it's great to see such an idea in action.
+
+3. **[Unplugin JSX Short Bind](https://github.com/zhiyuanzmj/unplugin-jsx-short-bind)**  
+  This is, by far, the most impressive solution I’ve encountered. It’s framework-agnostic and works seamlessly with various bundlers like `tsup`, `rollup`, `vite`, etc.  
+  What sets it apart is that it doesn’t require modifying a parser. Instead, it’s built on top of [AST Grep](https://github.com/ast-grep/ast-grep), a powerful tool for manipulating ASTs without the need to fork a JSX transpiler. Highly recommended!
+
+These resources have been invaluable, and I encourage you to check them out!
 
 ## Contributing
 
