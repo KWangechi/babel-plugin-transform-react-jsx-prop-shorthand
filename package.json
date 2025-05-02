@@ -18,8 +18,7 @@
   "license": "MIT",
   "description": "Transforms React JSX shorthand props with double colons to Standard JSX syntax",
   "dependencies": {
-    "@kwangechi/modified-babel-parser": "github:KWangechi/modified-babel-parser",
-    "@kwangechi/modified-parser": "github:KWangechi/modified-babel-parser"
+    "@kwangechi/modified-babel-parser": "github:KWangechi/modified-babel-parser"
   },
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.25.9",
@@ -40,7 +39,6 @@
   },
   "files": [
     "src",
-    "dist",
-    "README.md"
+    "dist"
   ]
 }
