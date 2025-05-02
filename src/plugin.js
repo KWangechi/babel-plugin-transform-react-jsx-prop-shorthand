@@ -1,5 +1,5 @@
 import { types as t } from "@babel/core";
-import * as babelParser from "../babel-parser/index.js";
+import * as babelParser from "@kwangechi/modified-babel-parser";
 
 const { parse } = babelParser;
 
