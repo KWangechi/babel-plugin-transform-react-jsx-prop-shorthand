@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-react-jsx-prop-shorthand",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./dist/index.js",
   "type": "module",
   "scripts": {
@@ -17,21 +17,30 @@
   "author": "KWangechi<https://github.com/KWangechi>",
   "license": "MIT",
   "description": "Transforms React JSX shorthand props with double colons to Standard JSX syntax",
-  "dependencies": {},
+  "dependencies": {
+    "@kwangechi/modified-babel-parser": "github:KWangechi/modified-babel-parser",
+    "@kwangechi/modified-parser": "github:KWangechi/modified-babel-parser"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.25.9",
+    "@babel/preset-react": "^7.26.3",
+    "@vitejs/plugin-react": "^4.4.1",
+    "fast-glob": "^3.3.3",
+    "vite": "^6.3.0",
+    "vitest": "^0.30.0"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "files": [
     "src",
     "dist",
     "README.md"
-  ],
-  "devDependencies": {
-    "fast-glob": "^3.3.3",
-    "vite": "^6.3.0",
-    "vitest": "^0.30.0",
-    "@babel/plugin-transform-react-jsx": "^7.25.9",
-    "@vitejs/plugin-react": "^4.4.1",
-    "@babel/preset-react": "^7.26.3"
-  },
-  "peerDependencies": {
-    "@babel/core": "^7.0.0"
-  }
+  ]
 }
