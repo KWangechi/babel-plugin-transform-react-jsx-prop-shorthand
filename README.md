@@ -22,16 +22,11 @@ where possible, making your code cleaner and more concise.
 
 This plugin bundles modified versions of `@babel/parser`, `@babel/types`, and `@babel/traverse` to support the `::propA` syntax. The modified code is derived from the Babel project (https://babeljs.io/) and is licensed under the MIT License. A link to the [LICENSE](https://github.com/babel/babel/blob/main/LICENSE)
 
-## Limitations
-
-- **Restricted to React Functional Components (RFCs):** This plugin only supports shorthand syntax for props used in React Functional Components. It does not work with class components or other types of React elements.
-- **Non-standard Syntax:** The shorthand syntax (`::prop`) is not part of standard JSX or React. It requires a custom Babel implementation, which may cause compatibility issues with other Babel tools and plugins. Additionally, IDEs like VSCode may show errors as the syntax is not recognized by the JSX LSP Server.
-- **Potential Maintenance Overhead:** Since the plugin relies on a custom Babel implementation, updates to Babel's main codebase may require corresponding updates to the plugin to maintain compatibility.
 
 ## Installation
 
 ```bash
-npm install --save-dev babel-plugin-transform-react-jsx-prop-shorthand
+npm install babel-plugin-transform-react-jsx-prop-shorthand
 ```
 
 ## Usage
@@ -76,6 +71,12 @@ During the development of this project, I came across several insightful resourc
   What sets it apart is that it doesn’t require modifying a parser. Instead, it’s built on top of [AST Grep](https://github.com/ast-grep/ast-grep), a powerful tool for manipulating ASTs without the need to fork a JSX transpiler. Highly recommended!
 
 These resources have been invaluable, and I encourage you to check them out!
+
+## Limitations
+
+- **Restricted to React Functional Components (RFCs):** This plugin only supports shorthand syntax for props used in React Functional Components. It does not work with class components or other types of React elements.
+- **Non-standard Syntax:** The shorthand syntax (`::prop`) is not part of standard JSX or React. It requires a custom Babel implementation, which may cause compatibility issues with other Babel tools and plugins. Additionally, IDEs like VSCode may show errors as the syntax is not recognized by the JSX LSP Server.
+- **Potential Maintenance Overhead:** Since the plugin relies on a custom Babel implementation, updates to Babel's main codebase may require corresponding updates to the plugin to maintain compatibility.
 
 ## Contributing
 
