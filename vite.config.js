@@ -14,11 +14,10 @@ export default defineConfig({
     },
     sourcemap: false,
     rollupOptions: {
-      external: ["@babel/core", "@babel/plugin-syntax-jsx", "@kwangechi/modified-babel-parser"],
+      external: ["@babel/core", "@kwangechi/modified-babel-parser"],
       output: {
         globals: {
           "@babel/core": "babel",
-          "@babel/plugin-syntax-jsx": "jsx",
           "@kwangechi/modified-babel-parser": "babelParser",
         },
       },
