@@ -20,7 +20,7 @@ where possible, making your code cleaner and more concise.
 
 ## Important Note
 
-This plugin bundles modified versions of `@babel/parser`, `@babel/types`, and `@babel/traverse` to support the `::propA` syntax. The modified code is derived from the Babel project (https://babeljs.io/) and is licensed under the MIT License. A link to the [LICENSE](https://github.com/babel/babel/blob/main/LICENSE)
+This plugin uses a modified parser forked from the official Babel Parser in order to support `::propA` syntax. Link to the modified parser:  [Babel Modified Parser](https://github.com/KWangechi/modified-babel-parser)
 
 
 ## Installation
