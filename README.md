@@ -16,7 +16,6 @@ A Babel plugin that transforms React JSX props Shorthand Syntax - by using doubl
 <CompA propA={propA} propB={propB} />
 ```
 
-where possible, making your code cleaner and more concise.
 
 ## Important Note
 
